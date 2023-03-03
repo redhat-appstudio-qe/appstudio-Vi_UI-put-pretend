@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: dc-metro-map
+  namespace: release-managed-lekq
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/dcmetromap@sha256:4afb2eb6a258bd8e6aadefef7ced5599fd4bcfb2f81527a6ab640bcae2b15f46
+        name: container-image
+        resources: {}
+status: {}
